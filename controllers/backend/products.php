@@ -2,10 +2,10 @@
 class Products extends CI_Controller {
 
 	public function __construct()
-    {
+        {
         parent::__construct();   
         $this->load->model('products_model','datamodel');     
-    }
+        }
 	   
 	public function index() // untuk menapilkan data produk dan data kategori
 	{
