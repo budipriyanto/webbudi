@@ -3,8 +3,8 @@ class Products extends CI_Controller {
 
 	public function __construct()
         {
-        parent::__construct();   
-        $this->load->model('products_model','datamodel');     
+        	parent::__construct();   
+        	$this->load->model('products_model','datamodel');     
         }
 	   
 	public function index() // untuk menapilkan data produk dan data kategori
@@ -18,7 +18,7 @@ class Products extends CI_Controller {
 		$data['array_product']=$this->datamodel->get_products();
 		$data['array_products'] = $this->datamodel->get_categories_by_id();
 		$data['array_categories'] = $this->datamodel->get_categories();
-        $this->mytemplate->loadBackend('products',$data);
+        	$this->mytemplate->loadBackend('products',$data);
 	}
 }
 
